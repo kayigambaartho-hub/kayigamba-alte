@@ -1,0 +1,7 @@
+{
+  "name": "Interview Prep Guide",
+  "description": "An AI-powered mobile application to help job seekers prepare for interviews with question libraries, mock interview simulations, professional tips, and company-specific guides.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
