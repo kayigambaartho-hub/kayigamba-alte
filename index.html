@@ -2,28 +2,68 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interview Prep Guide</title>
+    <title>Count with Stars</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-      body {
-        background-color: #e2e8f0; /* slate-200 */
-        background-image: linear-gradient(to bottom right, #f1f5f9, #e2e8f0); /* slate-100 to slate-200 */
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              'fredoka': ['"Fredoka One"', 'cursive'],
+              'nunito': ['Nunito', 'sans-serif'],
             },
-          },
-        },
+            colors: {
+              'brand-bg': '#E0F7FA', // Light Sky Blue
+              'brand-yellow': '#FFD95A', // Sunny Yellow
+              'brand-blue': '#5AC9FF',   // Bright Sky Blue
+              'brand-green': '#85E0A3',  // Pastel Green
+              'brand-red': '#FF8A80',    // Soft Coral
+              'brand-purple': '#C58AF9', // Playful Purple
+              'brand-pink': '#F48FB1',   // Candy Pink
+              'brand-orange': '#FFB74D', // Soft Orange
+              'brand-text': '#4A2A4A',   // Dark Purple
+            },
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+              'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
+              'tada': 'tada 1.5s ease-in-out',
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+              'bobbing': 'bobbing 3s ease-in-out infinite',
+              'twinkling': 'twinkling 2.5s ease-in-out infinite',
+            },
+            keyframes: {
+              tada: {
+                '0%': { transform: 'scale(1)' },
+                '10%': { transform: 'scale(0.9) rotate(-3deg)' },
+                '20%': { transform: 'scale(0.9) rotate(-3deg)' },
+                '30%': { transform: 'scale(1.1) rotate(3deg)' },
+                '40%': { transform: 'scale(1.1) rotate(-3deg)' },
+                '50%': { transform: 'scale(1.1) rotate(3deg)' },
+                '60%': { transform: 'scale(1.1) rotate(-3deg)' },
+                '70%': { transform: 'scale(1.1) rotate(3deg)' },
+                '80%': { transform: 'scale(1) rotate(-3deg)' },
+                '90%': { transform: 'scale(1) rotate(3deg)' },
+                '100%': { transform: 'scale(1) rotate(0)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              bobbing: {
+                '0%, 100%': { transform: 'translateY(-4px)' },
+                '50%': { transform: 'translateY(4px)' },
+              },
+              twinkling: {
+                '0%, 100%': { opacity: '0.3' },
+                '50%': { opacity: '1' },
+              }
+            }
+          }
+        }
       }
     </script>
   <script type="importmap">
@@ -32,13 +72,13 @@
     "react": "https://aistudiocdn.com/react@^19.1.1",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
     "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0"
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.0"
   }
 }
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
+  <body class="bg-gradient-to-b from-sky-400 to-indigo-500">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>

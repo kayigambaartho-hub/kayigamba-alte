@@ -1,24 +1,14 @@
-export type View = 'DASHBOARD' | 'MOCK_INTERVIEW' | 'RESOURCES' | 'RESUME_BUILDER';
 
-export type ResourceTab = 'QUESTIONS' | 'TIPS' | 'COMPANIES';
+export type Screen = 'home' | 'learn' | 'game' | 'progress';
 
-export interface InterviewQuestion {
-  id: number;
-  question: string;
-  category: string;
-  modelAnswer: string;
+export type ProgressData = { [key: number]: number };
+
+export interface NavItem {
+  id: Screen;
+  label: string;
+  icon: (isActive: boolean) => React.ReactNode;
 }
 
-export interface ProfessionalTip {
-  id: number;
-  title: string;
-  content: string;
-  icon: React.ComponentType<{ className?: string }>;
-}
+export type Level = 'Beginner' | 'Medium' | 'Difficult';
 
-export interface CompanyGuide {
-  id: number;
-  name: string;
-  logoUrl: string;
-  commonQuestions: string[];
-}
+export type GameProgress = { [key in Level]: number };

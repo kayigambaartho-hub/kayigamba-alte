@@ -1,7 +1,5 @@
 {
-  "name": "Interview Prep Guide",
-  "description": "An AI-powered mobile application to help job seekers prepare for interviews with question libraries, mock interview simulations, professional tips, and company-specific guides.",
-  "requestFramePermissions": [
-    "microphone"
-  ]
+  "name": "Count with Stars",
+  "description": "A fun and educational mobile application for young children to learn numbers and basic counting. The app features colorful numbers, interactive lessons, simple games, and a progress tracker for parents.",
+  "requestFramePermissions": []
 }
